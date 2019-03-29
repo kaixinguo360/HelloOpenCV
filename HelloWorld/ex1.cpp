@@ -5,7 +5,7 @@ using namespace cv;
 namespace ex1
 {
 	// 灰度化
-	Mat toGray(Mat img)
+	Mat gray(Mat img)
 	{
 		// 新建单通道图像
 		Mat gray(img.rows, img.cols, CV_8UC1);
@@ -15,7 +15,7 @@ namespace ex1
 
 		// 手动灰度化
 		for (int i = 0; i < img.rows; i++) {
-			for (int j = 0; j < img.rows; j++) {
+			for (int j = 0; j < img.cols; j++) {
 				Vec3b point = img.at<Vec3b>(i, j);
 
 				// 加权平均法, 红/黄/蓝 = 0.30/0.59/0.11
@@ -34,7 +34,7 @@ namespace ex1
 
 		// 手动二值化
 		for (int i = 0; i < img.rows; i++) {
-			for (int j = 0; j < img.rows; j++) {
+			for (int j = 0; j < img.cols; j++) {
 				uchar point = img.at<uchar>(i, j);
 
 				// 与阈值比较

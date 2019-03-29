@@ -4,7 +4,7 @@ using namespace cv;
 
 namespace ex1
 {
-	Mat toGray(Mat img);
+	Mat gray(Mat img);
 
 	void threshold(Mat img, uchar threshold);
 }
