@@ -3,6 +3,7 @@
 
 #include"ex1.h"
 #include"ex2.h"
+#include"ex3.h"
 
 using namespace cv;
 
@@ -26,6 +27,10 @@ int main() {
 	// 获取边界
 	Mat line = ex2::line(bin);
 	imshow("Line", line);
+
+	// 分割
+	Mat segment = ex3::segment(bin, 255);
+	imshow("Segment", segment);
 
 	waitKey();
 }
