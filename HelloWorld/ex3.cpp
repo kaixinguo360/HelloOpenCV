@@ -6,6 +6,8 @@ using namespace cv;
 
 namespace ex3
 {
+	static int DEFAULT_COUNT = 0;
+
 	// 合并标号
 	void merge(Mat mark, int from, int to) {
 		int count = 0;
@@ -20,7 +22,7 @@ namespace ex3
 		// printf("共处理 %d 个点, ", count);
 	}
 
-	Mat getMark(Mat img, uchar space) {
+	Mat getMark(Mat img, uchar space, int &count = DEFAULT_COUNT) {
 
 		// 新建单通道图像
 		Mat mark(img.rows, img.cols, CV_8UC1);
@@ -126,6 +128,7 @@ namespace ex3
 				}
 			}
 		}
+		count = minMark - 1;
 
 		return mark;
 	}

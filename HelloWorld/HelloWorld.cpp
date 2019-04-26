@@ -4,6 +4,7 @@
 #include"ex1.h"
 #include"ex2.h"
 #include"ex3.h"
+#include"ex4.h"
 
 using namespace cv;
 
@@ -31,6 +32,10 @@ int main() {
 	// ·Ö¸î
 	Mat segment = ex3::segment(bin, 255);
 	imshow("Segment", segment);
+
+	// »­³öÖ÷Öá
+	Mat axis = ex4::getAxis(bin, 255);
+	imshow("Axis", axis);
 
 	waitKey();
 }

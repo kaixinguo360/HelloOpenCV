@@ -27,6 +27,9 @@
     <ClCompile Include="ex3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ex4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ex1.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ex3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ex4.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
